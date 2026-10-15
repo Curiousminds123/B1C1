@@ -7,6 +7,7 @@ Curso interactivo de español para estudiantes de ELE (español como lengua extr
 ## ✨ Qué incluye
 
 - **45 módulos completos**: 15 por nivel (8 de gramática + 7 de vocabulario).
+- Los 45 módulos incluyen vocabulario y ejercicios adicionales para practicar cada tema.
 - Cada módulo tiene 5 partes:
   - 📘 **Teoría** con tablas, ejemplos traducidos, trucos y errores frecuentes.
   - 🖼️ **Vocabulario**: tarjetas con imagen (emoji) que se giran y se escuchan.
@@ -64,7 +65,8 @@ B1C1ESPAÑOLAPP/
 │   ├── levels.js         # descripción de los niveles B1, B2 y C1
 │   ├── b1-gramatica.js   b1-vocabulario.js
 │   ├── b2-gramatica.js   b2-vocabulario.js
-│   └── c1-gramatica.js   c1-vocabulario.js
+│   ├── c1-gramatica.js   c1-vocabulario.js
+│   └── advanced-practice.js # ampliaciones de vocabulario y ejercicios B2-C1
 ├── assets/img/           # logo, mascota, insignias y trofeo (SVG propios)
 ├── .nojekyll             # GitHub Pages sirve los archivos tal cual
 └── README.md

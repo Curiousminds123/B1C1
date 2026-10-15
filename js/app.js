@@ -331,7 +331,7 @@
     } else if (e.type === "listen") {
       h += `<div class="kind">Escucha y elige · Listen and choose</div><div class="center"><button class="btn blue" id="play" style="font-size:28px;padding:16px 34px">🔊</button><p class="muted">Toca para escuchar otra vez</p></div><div class="opts-grid">${e.o.map((o, j) => `<button class="opt" data-j="${j}">${esc(o)}</button>`).join("")}</div>`;
     }
-    h += `<div id="fb"></div>`;
+    h += `<p class="muted">Cuando aparezca la corrección, pulsa «Continuar al siguiente ejercicio» para avanzar.</p><div id="fb"></div>`;
     box.innerHTML = h;
     $("#quit").onclick = () => { if (confirm("¿Salir? Perderás el progreso de esta lección.")) go(L.exam ? "#/" : `#/m/${L.m.id}/teoria`); };
     $$(".opt", box).forEach(b => b.onclick = () => check(+b.dataset.j));
@@ -384,7 +384,7 @@
     if (e.type === "img" || e.type === "listen" || e.type === "ord") say(e.type === "ord" ? e.w : e.say || e.o[e.a]);
     const last = L.i + 1 >= L.items.length || (!L.exam && L.hp <= 0);
     $("#fb").innerHTML = `<div class="fb ${ok ? "ok" : "no"}">${ok ? "¡Correcto! +" + CONFIG.XP_OK + " XP" : "Respuesta correcta: " + esc(ans)}${note ? "<br>" + note : ""}<br><span class="en" style="font-weight:400">${esc(e.t || "")}</span></div>
-      <p><button class="btn" id="cont">${last ? "Ver resultado" : "Continuar"}</button></p>`;
+      <p><button class="btn" id="cont">${last ? "Ver resultado" : "Continuar al siguiente ejercicio →"}</button></p>`;
     const c = $("#cont");
     c.focus();
     c.onclick = () => { L.i++; question(); };
