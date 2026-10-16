@@ -224,7 +224,6 @@
       });
       h += `</div><div class="path"><h3>🏆 Examen de nivel</h3><button class="node exam" data-go="#/examen/${L.id}">🏆${S.exam[L.id] ? '<span class="chk">✅</span>' : ""}</button><div class="lab">Examen ${L.id}${S.exam[L.id] ? " · " + S.exam[L.id] + "%" : ""}</div></div>`;
     }
-    h += `<footer class="foot">Camino al Español · B1–C1 · Hecho para estudiantes de ELE 🇪🇸🌎</footer>`;
     main().innerHTML = h;
     bind();
     $$("[data-l]").forEach(b => b.onclick = () => { view.lvl = b.dataset.l; expanded.add(b.dataset.l); renderNav(); home(); });
